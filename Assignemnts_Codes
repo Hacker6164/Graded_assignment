@@ -1,0 +1,28 @@
+#Question_1::
+
+print("Select the books you want!!\n")
+Q=input("Press any key to view the list of books") #Takes a dummy input from the user
+print("\t1.Introduction to Python Programming: Rs 499.00\n\t2.Python Libraries CookBook\t    : Rs 855.00\n\t3.Data Science in Python\t    : Rs 645.00\n!!GST and Delivery charges are applicable!!")
+#Takes input from the customer
+b1=int(input("How many copies of First nook do you need?"))
+b2=int(input("How many copies of Second nook do you need?"))
+b3=int(input("How many copies of Third nook do you need?"))
+#Generates a basic mrp based bill
+mrp_bill=(b1*499)+(b2*855)+(b3*645)
+#Adds gst to the bill
+gst_bill=float((mrp_bill*(0.12))+mrp_bill)
+#Delivery sarges are added
+Final_bill=float((gst_bill)+(250))
+print("You selected",b1+b2+b3," Books\nSub Total=\t",mrp_bill,"\n-------------------------------")
+print("GST:12%\t\t ",gst_bill,"\nDelivery charges: 250\n-------------------------------")
+print("Grand Total:\t ",Final_bill)
+
+#Question_2::
+
+a=input("string1 = ")
+l=[] #Empty list for order retainment
+for i in a:
+    i=i.lower() #converts the uppercase character in the string to lower case
+    if i not in l:
+        l.append(i) #retains the order of output same as the input
+print("uniqueLetters = ",",".join(l))
